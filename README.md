@@ -3,6 +3,13 @@
 
 # StarlightSkinRenderer
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Java Version](https://img.shields.io/badge/Java-8%2B-blue)](https://www.oracle.com/java/technologies/javase-downloads.html)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.7%2F1.8-brightgreen)](https://minecraft.net)
+[![API: Starlight Skins](https://img.shields.io/badge/API-Starlight%20Skins-blueviolet)](https://starlightskins.lunareclipse.studio)
+
+---
+
 **StarlightSkinRenderer** is a lightweight skin renderer for Minecraft 1.7/1.8 (MCP/Forge), using the [Starlight Skins API](https://starlightskins.lunareclipse.studio).  
 It dynamically fetches and renders player skins in various 3D poses by querying the API, supporting both Mojang premium skins and custom skin servers.
 
@@ -109,6 +116,13 @@ Free to use in mods, GUIs, launchers, or any other project.
   <summary>🇫🇷 Français</summary>
 
 # StarlightSkinRenderer
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Java Version](https://img.shields.io/badge/Java-8%2B-blue)](https://www.oracle.com/java/technologies/javase-downloads.html)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.7%2F1.8-brightgreen)](https://minecraft.net)
+[![API: Starlight Skins](https://img.shields.io/badge/API-Starlight%20Skins-blueviolet)](https://starlightskins.lunareclipse.studio)
+
+---
 
 **StarlightSkinRenderer** est un moteur de rendu de skins léger pour Minecraft 1.7/1.8 (MCP/Forge), utilisant l'API [Starlight Skins](https://starlightskins.lunareclipse.studio).  
 Il génère dynamiquement une image du skin d'un joueur dans une pose 3D spécifiée, en interrogeant l'API. Il prend en charge les skins premium Mojang ainsi que des serveurs de skins personnalisés.
