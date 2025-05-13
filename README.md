@@ -22,8 +22,6 @@ It supports dynamic rendering of player skins with a variety of 3D poses, crop o
 
 ## 🖼 Preview
 
-> You can insert a screenshot of all rendered models in-game here:
-
 <p align="center">
   <img src="images/preview.png" alt="StarlightSkinRenderer Preview" width="800"/>
 </p>
@@ -113,8 +111,6 @@ Il prend en charge le rendu dynamique de skins dans une variété de poses 3D, a
 ---
 
 ## 🖼 Aperçu
-
-> Insérez ici une capture d’écran de tous les modèles affichés en jeu :
 
 <p align="center">
   <img src="images/preview.png" alt="Aperçu du rendu StarlightSkinRenderer" width="800"/>
