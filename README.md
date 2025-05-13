@@ -4,7 +4,7 @@
 # StarlightSkinRenderer
 
 **StarlightSkinRenderer** is a lightweight skin renderer for Minecraft 1.7/1.8 (MCP/Forge), using the [Starlight Skins API](https://starlightskins.lunareclipse.studio).  
-It supports dynamic rendering of player skins with a variety of 3D poses, crop options, custom skin URLs, automatic local caching, and fallback mechanisms.
+It dynamically fetches and renders player skins in various 3D poses by querying the API, supporting both Mojang premium skins and custom skin servers.
 
 ---
 
@@ -16,7 +16,6 @@ It supports dynamic rendering of player skins with a variety of 3D poses, crop o
 - ✅ Automatic scaling, centering, and validation
 - ✅ Fully asynchronous image downloads (non-blocking)
 - ✅ Advanced caching with expiration and memory management
-- ✅ Fallback support for default skins when errors occur
 - ✅ Detailed logs for debugging and error tracking
 - ✅ Fluent Java builder API
 - ✅ Compatible with Minecraft 1.7/1.8 (MCP or Forge)
@@ -36,18 +35,31 @@ It supports dynamic rendering of player skins with a variety of 3D poses, crop o
 
 ```java
 StarlightSkinRenderer.builder()
-    .username("CipheR_")
+    .username("CipheR_") // Minecraft username or custom API name
     .renderType(StarlightSkinRenderer.RenderType.MARCHING)
     .cropType(StarlightSkinRenderer.CropType.FULL)
-    .customSkinUrl("https://yourwebsite.com/skins/{{username}}")
+    .customSkinUrl("https://yourwebsite.com/skins/{{username}}") // Optional for custom skin APIs
     .position(100f, 200f)
     .scale(150f)
     .centered(true)
     .render();
 ```
 
-✅ You can replace `customSkinUrl` with your own CMS or skin system.  
+✅ If using `customSkinUrl`, replace it with your own skin API.  
 Use `{{username}}` as a placeholder for the player's name.
+
+---
+
+## 🧱 How It Works
+
+1. **Fetches Skins Dynamically**:  
+   The class queries the [Starlight Skins API](https://starlightskins.lunareclipse.studio) to fetch a generated image of the player's skin in the specified pose and crop. You can use Mojang's premium skin system or your own custom API for skins.
+
+2. **Supports 3D Poses and Crops**:  
+   Choose from 24 3D poses and 3 crop modes (`FULL`, `BUST`, or `FACE`) to render your skin.
+
+3. **Asynchronous and Cached**:  
+   Skins are downloaded asynchronously to avoid blocking the game and cached in memory for faster subsequent loads.
 
 ---
 
@@ -68,7 +80,6 @@ CHEERING, HEAD, ISOMETRIC, ULTIMATE, CRISS_CROSS, WALKING, MARCHING, DEFAULT
 ### 🧠 Advanced Caching
 
 - **How it works**: Skins are downloaded once and cached in memory, with automatic expiration after 10 minutes.
-- **Fallback**: If the skin cannot be downloaded, a default skin is used (customizable in your project).
 - **Memory efficiency**: Expired skins are automatically removed from the cache.
 
 ---
@@ -100,7 +111,7 @@ Free to use in mods, GUIs, launchers, or any other project.
 # StarlightSkinRenderer
 
 **StarlightSkinRenderer** est un moteur de rendu de skins léger pour Minecraft 1.7/1.8 (MCP/Forge), utilisant l'API [Starlight Skins](https://starlightskins.lunareclipse.studio).  
-Il prend en charge le rendu dynamique de skins dans une variété de poses 3D, avec des options de recadrage, une URL personnalisée, une mise en cache locale automatique et des mécanismes de fallback.
+Il génère dynamiquement une image du skin d'un joueur dans une pose 3D spécifiée, en interrogeant l'API. Il prend en charge les skins premium Mojang ainsi que des serveurs de skins personnalisés.
 
 ---
 
@@ -112,7 +123,6 @@ Il prend en charge le rendu dynamique de skins dans une variété de poses 3D, a
 - ✅ Mise à l’échelle automatique, centrage et validation
 - ✅ Téléchargements d'images entièrement asynchrones (sans blocage)
 - ✅ Mise en cache avancée avec expiration et gestion mémoire
-- ✅ Support de fallback pour un skin par défaut en cas d'erreur
 - ✅ Logs détaillés pour le débogage et le suivi des erreurs
 - ✅ API fluide avec un builder Java
 - ✅ Compatible avec Minecraft 1.7/1.8 sous MCP ou Forge
@@ -132,18 +142,31 @@ Il prend en charge le rendu dynamique de skins dans une variété de poses 3D, a
 
 ```java
 StarlightSkinRenderer.builder()
-    .username("CipheR_")
+    .username("CipheR_") // Nom d'utilisateur Minecraft ou API personnalisée
     .renderType(StarlightSkinRenderer.RenderType.MARCHING)
     .cropType(StarlightSkinRenderer.CropType.FULL)
-    .customSkinUrl("https://votresite.com/skins/{{username}}")
+    .customSkinUrl("https://votresite.com/skins/{{username}}") // Optionnel pour des APIs personnalisées
     .position(100f, 200f)
     .scale(150f)
     .centered(true)
     .render();
 ```
 
-✅ Vous pouvez remplacer `customSkinUrl` par votre propre système de skins.  
+✅ Vous pouvez remplacer `customSkinUrl` par votre propre API de skins.  
 Utilisez `{{username}}` comme variable pour le pseudo du joueur.
+
+---
+
+## 🧱 Comment ça marche
+
+1. **Téléchargement dynamique des skins** :  
+   La classe interroge l'[API Starlight Skins](https://starlightskins.lunareclipse.studio) pour générer une image du skin du joueur dans la pose et le recadrage spécifiés. Vous pouvez utiliser le système Mojang ou une API personnalisée.
+
+2. **Support des poses 3D et des recadrages** :  
+   Choisissez parmi 24 poses 3D et 3 recadrages (`FULL`, `BUST` ou `FACE`) pour afficher votre skin.
+
+3. **Asynchrone et mis en cache** :  
+   Les skins sont téléchargés de manière asynchrone pour éviter de bloquer le jeu et mis en cache en mémoire pour des chargements ultérieurs plus rapides.
 
 ---
 
@@ -164,7 +187,6 @@ CHEERING, HEAD, ISOMETRIC, ULTIMATE, CRISS_CROSS, WALKING, MARCHING, DEFAULT
 ### 🧠 Mise en cache avancée
 
 - **Comment ça marche** : Les skins sont téléchargés une fois et mis en cache en mémoire. Ils expirent automatiquement après 10 minutes.
-- **Fallback** : Si le skin ne peut pas être téléchargé, un skin par défaut est utilisé (personnalisable dans votre projet).
 - **Efficacité mémoire** : Les skins expirés sont automatiquement supprimés du cache.
 
 ---
