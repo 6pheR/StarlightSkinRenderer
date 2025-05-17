@@ -6,7 +6,7 @@
 [![API: Starlight Skins](https://img.shields.io/badge/API-Starlight%20Skins-blueviolet)](https://starlightskins.lunareclipse.studio)
 
 <p align="center">
-  <img src="images/logo" alt="StarlightSkinAPI Logo" width="800"/>
+  <img src="images/logo.png" alt="StarlightSkinAPI Logo" width="800"/>
 </p>
 
 ---
