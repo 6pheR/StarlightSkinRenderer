@@ -5,6 +5,10 @@
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.7%2F1.8-brightgreen)](https://minecraft.net)
 [![API: Starlight Skins](https://img.shields.io/badge/API-Starlight%20Skins-blueviolet)](https://starlightskins.lunareclipse.studio)
 
+<p align="center">
+  <img src="images/logo" alt="StarlightSkinAPI Logo" width="800"/>
+</p>
+
 ---
 
 **StarlightSkinRenderer** is a lightweight skin renderer for Minecraft 1.7/1.8 (MCP/Forge), using the [Starlight Skins API](https://starlightskins.lunareclipse.studio).  
